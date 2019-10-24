@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat List</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>age</td>
+        </tr>
+        {% if cats_list %}
+
+        {% for cat in cats_list %}
+            <tr>
+                <td>{{ cat.id }}</td>
+                <td>{{ cat.name }}</td>
+                <td>{{ cat.age }}</td>
+            </tr>
+        {% endfor %}
+
+    {% else %}
+        <p>No cat</p>
+    {% endif %}
+    </table>
+
+</body>
+</html>
