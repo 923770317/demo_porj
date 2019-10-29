@@ -29,13 +29,12 @@ def add(request):
     if request.method == 'GET':
         return render(request, 'demo_app/add.html',{})
     else:
-        name = request.get['name']
-        age = int(request.get['age'])
+        name = request.POST['name']
+        age = int(request.POST['age'])
         cat = Cat(name=name, age=age)
         cat.save()
         cats_list = Cat.objects.all()
         return render(request,'demo_app/index.html',{'cats_list':cats_list})
-
 
 
 def hello_country(request, country_name):
