@@ -7,9 +7,9 @@
 <body>
     <form action="{% url 'demo_app:add' %}" method="post">
         {% csrf_token %}
-
-        name:<input  name="name"> </br>
-    age : <input  name="age" ></br>
+        {{ form }}
+{#        name:<input  name="name"> </br>#}
+{#    age : <input  name="age" ></br>#}
 
 
         <input type="submit" value="submit">
